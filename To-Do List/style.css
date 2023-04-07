@@ -1,0 +1,238 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    font-family: 'Alegreya Sans SC', sans-serif;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    --accent-color:#CEE5D0;
+    --background-color:#191919;
+    --text-color:#CEE5D0;
+    --button-text-color:var(--accent-color);
+    --transition-delay:1s;
+    transition: var(--transition-delay);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+body.light{
+    --accent-color:#191919;
+    --background-color:#CEE5D0;
+    --text-color:#191919;
+    /* --button-text-color:#434343;  */
+}
+.theme-toggle-button{
+    
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--background-color); */
+    background: transparent;
+    color: var(--button-text-color);
+    width: 4rem;
+    display: flex;
+    padding: 5px;
+    margin: auto;
+    margin-top: 2%;
+
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition-delay);
+    transform: scale(1);
+}
+.theme-toggle-button:hover,
+.theme-toggle-button:focus{
+    transform: scale(1.1);
+}
+.sun,
+.moon{
+    position: absolute;
+    transition: opacity var(--transition-delay);
+}
+.moon{
+    top: 2%;
+    width: 2rem;
+    color: var(--button-text-color);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    
+}
+.sun{
+    bottom: 2%;
+    width: 2%;
+    color: var(--button-text-color);
+    opacity: 0;
+    margin: auto;
+}
+.light .moon{
+    opacity: 0;
+}
+
+.light .sun{
+    opacity: 1;
+}
+
+.sun-moon-container{
+    position: relative;
+    text-align: center;
+    --rotation:0;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    pointer-events: none;
+    height: 200vmin;
+    margin-bottom: 10px;
+    padding: 0px;
+    transform: rotate(var(--rotation));
+    transition: transform var(--transition-delay);
+}
+.light .sun-moon-container{
+    --rotation:180deg;
+}
+h1,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+h1{
+    font-size: 3.5rem;
+    margin-top: 2%;
+}
+form input , form button{
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    background: white;
+    /* font-family: "Raleway",sans-serif; */
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+form button{
+    color: #191919;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    color: white;
+    background: #191919;
+    
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+.todo{
+    margin: 0.5rem;
+    background-color: white;
+    color: #191919;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.todo li{
+    flex: 1;
+}
+.complete-btn,.trash-btn{
+    background: white;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.complete-btn{
+    color: green;
+    
+    transition: all 0.3s ease;
+}
+.trash-btn{
+    color: red;
+}
+.todo-item{
+    padding: 0rem 0.5rem;
+    color: #191919;
+}
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin:1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color:#191919;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    color: #191919;
+    background: white;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background: #191919;
+    color:white;
+}
+    
+    
+hr{
+    color: #CEE5D0;
+    width: 40%;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.quote-btn{
+    background: transparent;
+    border: none;
+    width: 40%;
+    justify-content: center;
+    letter-spacing: 2px;
+    color:var(--text-color) ;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    cursor: pointer;
+}
