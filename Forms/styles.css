@@ -20,7 +20,7 @@ body{
 .card{ 
     box-shadow: 0 0 15px 1px rgba(0, 0, 0,0.4);
     background-color: white;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     border-radius: .5rem;
     padding: .5rem;
     /* max-width: 300px; */
@@ -201,7 +201,7 @@ button:hover{
     display: flex;
     justify-content: space-between;
     counter-reset: step;
-    margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 .progressbar::before, .progress{
